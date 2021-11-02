@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNet.CodigosBancos</name>
+    </assembly>
+    <members>
+        <member name="T:DotNet.CodigosBancos.Banco">
+            <summary>
+            Classe Banco
+            </summary>
+        </member>
+        <member name="P:DotNet.CodigosBancos.Banco.Codigo">
+            <summary>
+            Codigo de Compensação
+            </summary>
+        </member>
+        <member name="P:DotNet.CodigosBancos.Banco.Nome">
+            <summary>
+            Nome do Banco
+            </summary>
+        </member>
+        <member name="P:DotNet.CodigosBancos.Banco.Site">
+            <summary>
+            Site do Banco
+            </summary>
+        </member>
+        <member name="T:DotNet.CodigosBancos.Bancos">
+            <summary>
+            Classe que é retornada
+            </summary>
+        </member>
+        <member name="P:DotNet.CodigosBancos.Bancos.BancoArray">
+            <summary>
+            Array de Banco
+            </summary>
+        </member>
+        <member name="T:DotNet.CodigosBancos.CodigosBanco">
+            <summary>
+            Classe com função que busca códigos de compensação dos Bancos.
+            </summary>
+        </member>
+        <member name="M:DotNet.CodigosBancos.CodigosBanco.#ctor(DotNet.CodigosBancos.IHttpClientWrapper)">
+            <summary>
+            Construtor para instanciar a classe HttpClientWrapper via injeção de dependência.
+            </summary>
+            <param name="httpClientWrapper">Objeto HttpClientWrapper</param>
+        </member>
+        <member name="M:DotNet.CodigosBancos.CodigosBanco.GetBancoByCodigo(System.Int32)">
+            <summary>
+            Busca o banco de acordo com o código
+            </summary>
+            <param name="codigoBanco">Código de Compensação</param>
+            <returns>Objeto Banco</returns>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">KeyNotFoundException</exception>
+            <exception cref="T:System.ArgumentException">ArgumentNullException</exception>
+        </member>
+        <member name="M:DotNet.CodigosBancos.CodigosBanco.GetBancos">
+            <summary>
+            Busca todos bancos
+            </summary>
+            <returns>Array de Bancos</returns>
+        </member>
+        <member name="M:DotNet.CodigosBancos.CodigosBanco.GetBancosByNome(System.String)">
+            <summary>
+            Busca o banco de acordo com o nome
+            </summary>
+            <param name="nomeProcurado">Nome do Banco</param>
+            <returns>Lista de Bancos</returns>
+            <exception cref="T:System.ArgumentNullException">ArgumentNullException</exception>
+        </member>
+        <member name="T:DotNet.CodigosBancos.HttpClientWrapper">
+            <summary>
+            Classe utilizada para abstrair as chamadas HTTP
+            </summary>
+        </member>
+        <member name="M:DotNet.CodigosBancos.HttpClientWrapper.#ctor">
+            <summary>
+            Construtor padrão
+            </summary>
+        </member>
+        <member name="M:DotNet.CodigosBancos.HttpClientWrapper.GetAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Realiza a chamada GET para a url
+            do BACEN
+            </summary>
+            <param name="requestMessage">Objeto da Requisição</param>
+            <returns>Task de HttpResponseMessage</returns>
+        </member>
+        <member name="T:DotNet.CodigosBancos.ICodigosBanco">
+            <summary>
+            Interface para a classe CodigosBanco
+            </summary>
+        </member>
+        <member name="M:DotNet.CodigosBancos.ICodigosBanco.GetBancosByNome(System.String)">
+            <summary>
+            Busca o banco de acordo com o nome
+            </summary>
+            <param name="nomeProcurado">Nome do Banco</param>
+            <returns>Lista de Bancos</returns>
+        </member>
+        <member name="M:DotNet.CodigosBancos.ICodigosBanco.GetBancoByCodigo(System.Int32)">
+            <summary>
+            Busca o banco de acordo com o código
+            </summary>
+            <param name="codigoBanco">Código de Compensação</param>
+            <returns>Objeto Banco</returns>
+        </member>
+        <member name="M:DotNet.CodigosBancos.ICodigosBanco.GetBancos">
+            <summary>
+            Busca todos bancos
+            </summary>
+            <returns>Array de Bancos</returns>
+        </member>
+        <member name="T:DotNet.CodigosBancos.IHttpClientWrapper">
+            <summary>
+            Interface do HttpClientWrapper
+            </summary>
+        </member>
+        <member name="M:DotNet.CodigosBancos.IHttpClientWrapper.GetAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Método responsável por chamar a url
+            dos Correios.
+            </summary>        
+            <param name="requestMessage">Objeto da Requisição</param>
+            <returns>Task de HttpResponseMessage</returns>
+        </member>
+        <member name="T:DotNet.CodigosBancos.StringExt">
+            <summary>
+            Classe de extensão
+            </summary>
+        </member>
+        <member name="M:DotNet.CodigosBancos.StringExt.ContainsInsensitive(System.String,System.String)">
+            <summary>
+            Método de extensão para auxiliar na busca
+            por nome do Banco
+            </summary>
+            <param name="source">origem</param>
+            <param name="search">palavra buscada</param>
+            <returns>booleano</returns>
+        </member>
+    </members>
+</doc>

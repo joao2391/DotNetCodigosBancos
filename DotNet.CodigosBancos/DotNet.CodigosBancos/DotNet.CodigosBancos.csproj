@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+	  <Authors>João Paulo de Castro Lima</Authors>
+	  <Company>joao2391</Company>
+	  <Product>DotNetCodigosBancos</Product>
+	  <Description>This lib helps you to get brazilian's banks list.</Description>
+	  <PackageTags>bancos, itau, santander, bradesco, btg</PackageTags>
+	  <PackageReleaseNotes>Beta version</PackageReleaseNotes>
+	  <PackageId>DotNetCodigosBancos</PackageId>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+	  <RepositoryUrl>https://github.com/joao2391/DotNetAgenciasBancos</RepositoryUrl>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageProjectUrl>https://github.com/joao2391/DotNetAgenciasBancos</PackageProjectUrl>
+	  <RepositoryType>Git</RepositoryType>
+	  <Version>1.0.0</Version>
+	  <!-- Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+	  <PublishRepositoryUrl>true</PublishRepositoryUrl>
+
+	  <!-- Embed source files that are not tracked by the source control manager in the PDB -->
+	  <EmbedUntrackedSources>true</EmbedUntrackedSources>
+
+	  <!-- Recommended: Embed symbols containing Source Link in the main file (exe/dll) -->
+	  <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>.\DotNet.CodigosBancos.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.37" />
+  </ItemGroup>
+
+</Project>
