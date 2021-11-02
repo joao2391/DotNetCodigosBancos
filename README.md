@@ -3,16 +3,16 @@
 DotNet.CodigosBancos is a .Net library that helps you to get brazilian's offset codes .
 
 ## Notes
-Version 1.0.0:
+Version 1.0.1:
 
-- BETA
+- Fix async
 
 ## Installation
 
 Use the package manager to install.
 
 ```bash
-Install-Package DotNetCodigosBancos  -Version 1.0.0
+Install-Package DotNetCodigosBancos  -Version 1.0.1
 ```
 
 ## Usage
