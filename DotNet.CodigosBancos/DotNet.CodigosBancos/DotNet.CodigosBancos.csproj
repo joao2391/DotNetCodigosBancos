@@ -11,11 +11,11 @@
 	  <PackageId>DotNetCodigosBancos</PackageId>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-	  <RepositoryUrl>https://github.com/joao2391/DotNetAgenciasBancos</RepositoryUrl>
+	  <RepositoryUrl>https://github.com/joao2391/DotNetCodigosBancos</RepositoryUrl>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
-	  <PackageProjectUrl>https://github.com/joao2391/DotNetAgenciasBancos</PackageProjectUrl>
+	  <PackageProjectUrl>https://github.com/joao2391/DotNetCodigosBancos</PackageProjectUrl>
 	  <RepositoryType>Git</RepositoryType>
-	  <Version>1.0.0</Version>
+	  <Version>1.0.1</Version>
 	  <!-- Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
 	  <PublishRepositoryUrl>true</PublishRepositoryUrl>
 
