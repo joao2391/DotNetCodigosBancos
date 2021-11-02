@@ -25,7 +25,7 @@ namespace DotNet.CodigosBancos
             _bancos = new Bancos();
             _dicionarioBancos = new Dictionary<int, Banco>();
 
-            BuildBancoAsync().ConfigureAwait(false);
+            BuildBanco();
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace DotNet.CodigosBancos
             return listaBancos;
         }
 
-        private async Task BuildBancoAsync()
+        private void BuildBanco()
         {
             try
             {
@@ -112,7 +112,7 @@ namespace DotNet.CodigosBancos
                     RequestUri = new Uri("https://www.codigobanco.com/")
                 };
 
-                var response = await _httpClient.GetAsync(requestMessage).ConfigureAwait(false);
+                var response = _httpClient.GetAsync(requestMessage).Result;
 
                 if (response is null)
                 {
@@ -120,7 +120,7 @@ namespace DotNet.CodigosBancos
                 }
 
                 var doc = new HtmlDocument();
-                var html = await response.Content.ReadAsStringAsync();
+                var html = response.Content.ReadAsStringAsync().Result;
                 doc.LoadHtml(html);
 
                 var quantidadeTabela = doc.DocumentNode.SelectSingleNode("/html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/article[1]/div[1]/table[1]/tbody[1]").ChildNodes.Count;

@@ -5,7 +5,7 @@
 	  <Authors>João Paulo de Castro Lima</Authors>
 	  <Company>joao2391</Company>
 	  <Product>DotNetCodigosBancos</Product>
-	  <Description>This lib helps you to get brazilian's banks list.</Description>
+	  <Description>This lib helps you to get brazilian's offset codes.</Description>
 	  <PackageTags>bancos, itau, santander, bradesco, btg</PackageTags>
 	  <PackageReleaseNotes>Beta version</PackageReleaseNotes>
 	  <PackageId>DotNetCodigosBancos</PackageId>
