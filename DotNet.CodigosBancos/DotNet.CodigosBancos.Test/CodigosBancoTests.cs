@@ -15,7 +15,7 @@ namespace DotNet.CodigosBancos.Test
 
         public CodigosBancoTests()
         {
-            fakeContent = File.ReadAllText(@".\FakeData.html");
+            fakeContent = File.ReadAllText(@"./FakeData.html");
         }
 
         [Fact]
